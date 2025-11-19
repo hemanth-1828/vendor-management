@@ -1,0 +1,80 @@
+#include <stdio.h>
+#include <string.h>
+#include "vendor.h"
+
+Vendor vendors[MAX_VENDORS];
+int vendorCount = 0;
+
+void addVendor() {
+    if (vendorCount >= MAX_VENDORS) {
+        printf("Vendor list is full!\n");
+        return;
+    }
+
+    Vendor v;
+
+    printf("Enter Vendor ID: ");
+    scanf("%d", &v.id);
+
+    printf("Enter Vendor Name: ");
+    scanf("%s", v.name);
+
+    printf("Enter Service Type (Catering/Decor/Lighting/etc.): ");
+    scanf("%s", v.service);
+
+    printf("Enter Phone Number: ");
+    scanf("%s", v.phone);
+
+    vendors[vendorCount++] = v;
+
+    printf("Vendor added successfully!\n");
+}
+
+void listVendors() {
+    if (vendorCount == 0) {
+        printf("No vendors available.\n");
+        return;
+    }
+
+    printf("\n--- Vendor List ---\n");
+    for (int i = 0; i < vendorCount; i++) {
+        printf("%d. ID: %d | Name: %s | Service: %s | Phone: %s\n",
+               i+1, vendors[i].id, vendors[i].name, vendors[i].service, vendors[i].phone);
+    }
+}
+
+void searchVendor() {
+    int id;
+    printf("Enter Vendor ID to search: ");
+    scanf("%d", &id);
+
+    for (int i = 0; i < vendorCount; i++) {
+        if (vendors[i].id == id) {
+            printf("Vendor Found:\n");
+            printf("Name: %s\nService: %s\nPhone: %s\n",
+                   vendors[i].name, vendors[i].service, vendors[i].phone);
+            return;
+        }
+    }
+
+    printf("Vendor not found.\n");
+}
+
+void deleteVendor() {
+    int id;
+    printf("Enter Vendor ID to delete: ");
+    scanf("%d", &id);
+
+    for (int i = 0; i < vendorCount; i++) {
+        if (vendors[i].id == id) {
+            for (int j = i; j < vendorCount - 1; j++) {
+                vendors[j] = vendors[j + 1];
+            }
+            vendorCount--;
+            printf("Vendor deleted successfully.\n");
+            return;
+        }
+    }
+
+    printf("Vendor not found.\n");
+}
