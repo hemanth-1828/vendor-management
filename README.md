@@ -1,150 +1,145 @@
-VENDOR MANAGEMENT SYSTEM
-ABSTRACT
+🏢 VENDOR MANAGEMENT SYSTEM (C Programming)
+📄 ABSTRACT
 
-The Vendor Management System is a simple console-based application developed in the C programming language. The main objective of this project is to maintain vendor information efficiently by performing essential operations such as adding vendors, displaying vendor details, and updating vendor contact information.
+The Vendor Management System is a terminal-based application written in C that enables users to manage vendors for events efficiently.
 
-This program utilizes structures and arrays to store vendor information including Vendor ID, Name, Contact Number, and Company Name. It supports a maximum of 10 vendor entries and offers a menu-driven interface for easy interaction.
+It provides essential capabilities such as adding, viewing, searching, updating, and deleting vendor details.
 
-The project demonstrates fundamental C programming concepts such as structures, arrays, loops, conditional statements, and functions. It serves as a practical introductory project for beginners learning to develop console-based applications in the C language.
+All records are stored persistently in a binary file (vendor.txt) ensuring that the data remains saved across program runs.
 
-FUNCTIONAL REQUIREMENTS
-1. Add Vendor
+This project illustrates key C programming concepts such as structures, file handling, control flow, loops, and modular design. It is suitable for beginners, coursework, and practical learning.
 
-Allows the user to add a new vendor.
+✨ FEATURES
+Core Functionalities
 
-Inputs Required:
+➕ Add new vendor records (Vendor ID, Name, Service Type, Phone Number)
+📋 Display all vendors in a formatted table
+🔍 Search vendor by Vendor ID
+✏️ Update vendor information
+❌ Delete vendor records
+💾 Persistent data storage using binary file (vendor.txt)
+🖥️ Fully terminal-based, menu-driven interface
+👨‍💻 Beginner-friendly modular code
+⚙️ Auto-creates the data file if missing
+⚠️ Includes basic input validation & error handling
 
-Vendor ID
+🛠️ TECHNICAL REQUIREMENTS
+System Requirements
 
-Vendor Name
+Operating System: Windows / Linux / macOS
 
-Contact Number
+Terminal or Command Prompt
 
-Company Name
+At least 4 MB RAM
 
-The vendor is stored in the vendor array if storage capacity has not been reached.
+Minimal disk space for vendor.txt
 
-2. Display All Vendors
+Software Requirements
 
-Displays a complete list of all vendors stored in the system.
+C Compiler: GCC / MinGW / Clang / MSVC
 
-Displays:
+Code Editor or IDE: VS Code, Code::Blocks, Dev-C++, etc.
 
-Vendor ID
+Optional: Make utility (if using a Makefile)
 
-Name
+Programming Requirements
 
-Contact Number
+Language: C
 
-Company Name
+Standard Supported: C89 / C99 / C11
 
-3. Update Vendor Contact
+Header files required: stdio.h, stdlib.h, string.h
 
-Enables the user to update the contact number of an existing vendor.
+File Handling: Read/Write permissions in working directory
 
-Process:
+Records stored in binary format (vendor.txt)
 
-User enters an existing Vendor ID.
+File auto-created if not found
 
-Program searches for the vendor in the database.
+📌 FUNCTIONAL REQUIREMENTS
+User Interface
 
-If found:
+Terminal-based CLI
 
-Prompts the user for a new contact number.
+Clean menu-driven navigation
 
-Updates the vendor’s contact information.
+Validates user input
 
-If not found:
+Vendor Management Operations
 
-Displays: “Vendor not found.”
+➕ Add Vendor
 
-4. Exit Program
+Enter Vendor ID, Name, Service Type, Phone Number
 
-Closes the application safely and terminates execution.
+Saved in vendor.txt
 
-PROJECT FEATURES
-Structured Data Storage
+📋 Display Vendors
 
-Uses
+Shows all vendor records in a clean table format
 
-struct vendor
+🔍 Search Vendor
+
+Search using unique Vendor ID
+
+✏️ Update Vendor
+
+Modify Name, Service Type, Phone Number, etc.
+
+❌ Delete Vendor
+
+Permanently removes a vendor record using a temporary file method
+
+Data Management
+
+Binary file storage → Fast and efficient
+
+Safe updates and deletions
+
+Handles empty/missing file gracefully
+
+🔄 PROGRAM FLOW
+
+Menu runs in a loop
+
+Exit option included
+
+Shows clear success/error messages appropriately
+
+▶️ RUNNING THE PROGRAM
+Compile
+gcc vendor.c -o vendor
+
+Run
+
+Linux / macOS
+
+./vendor
 
 
-to store:
+Windows
 
-Vendor ID
+vendor.exe
 
-Vendor Name
+Data File
 
-Contact Number
+Automatically creates vendor.txt
 
-Company Name
+Stores all vendor data in binary form
 
-Fixed Vendor List Size
+📸 SCREENSHOTS (Optional)
 
-Supports up to 10 vendors.
+Add Vendor
 
-Configurable using:
+Display Vendors
 
-#define MAX_VENDORS 10
+Search Vendor
 
-Menu-Driven Interface
+Update Vendor
 
-User-friendly menu with numbered options for selecting required operations.
+Delete Vendor
 
-Input Validation
+Exit
 
-Displays proper messages for:
+📝 Author
 
-Vendor list full
-
-No vendors available
-
-Invalid Vendor ID
-
-Modular Programming
-
-Uses separate functions:
-
-addVendor()
-
-displayVendors()
-
-updateVendorContact()
-
-This design makes the program easy to understand and maintain.
-
-SIMULATED CONSOLE OUTPUT (TEXT-BASED SCREENSHOTS)
-Screenshot 1: Main Menu
-========== Vendor Management System ==========
-1. Add Vendor
-2. Display All Vendors
-3. Update Vendor Contact
-4. Exit
-Enter your choice: _
-
-Screenshot 2: Adding a Vendor
-Enter Vendor ID: 201
-Enter Vendor Name: Raj Kumar
-Enter Contact Number: 9876543210
-Enter Company Name: Fresh Supplies Co.
-Vendor added successfully!
-
-Screenshot 3: Displaying Vendor List
-ID    Name           Contact        Company
-----------------------------------------------------
-201   Raj Kumar      9876543210     Fresh Supplies Co.
-202   Anita Rao      9123456780     Agro Traders Ltd.
-
-Screenshot 4: Updating Vendor Contact
-Enter Vendor ID to update: 201
-Enter new contact number: 9988776655
-Contact updated successfully!
-
-Screenshot 5: Vendor Not Found
-Enter Vendor ID to update: 999
-Vendor not found.
-
-Screenshot 6: Exit Program
-Exiting program...
-Thank you!
+J.Muni Bhargav Reddy
