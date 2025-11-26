@@ -128,18 +128,34 @@ Stores all vendor data in binary form
 
 📸 SCREENSHOTS (Optional)
 
+Menu
+<img width="406" height="181" alt="Screenshot 2025-11-20 211802" src="https://github.com/user-attachments/assets/e6e2a269-717b-411f-8342-6105b9bd2f97" />
+
+
 Add Vendor
+<img width="501" height="291" alt="Screenshot 2025-11-20 212044" src="https://github.com/user-attachments/assets/9914ee9b-2c49-4c47-8a57-2c0597c5a3d4" />
+
 
 Display Vendors
+<img width="596" height="254" alt="Screenshot 2025-11-20 213509" src="https://github.com/user-attachments/assets/fae84e34-c895-4dca-85d3-c4e2a73debb0" />
+
 
 Search Vendor
+<img width="547" height="313" alt="Screenshot 2025-11-20 213544" src="https://github.com/user-attachments/assets/32b25d89-fb14-495c-82d6-fcad7d684b8a" />
+
 
 Update Vendor
+<img width="500" height="311" alt="Screenshot 2025-11-20 213746" src="https://github.com/user-attachments/assets/ae437eaf-daeb-410b-9960-9213ea0e57ba" />
+
 
 Delete Vendor
+<img width="503" height="250" alt="Screenshot 2025-11-20 213826" src="https://github.com/user-attachments/assets/d386578d-656a-4a60-9c97-fa157d226bce" />
+
 
 Exit
+<img width="399" height="172" alt="Screenshot 2025-11-20 213850" src="https://github.com/user-attachments/assets/b6a0b863-1fbf-48fa-9f87-8d17ec077feb" />
+
 
 📝 Author
 
-J.Muni Bhargav Reddy
+A.Hemanth kumar.
